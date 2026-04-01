@@ -79,7 +79,7 @@ def create_application() -> Application:
 
     # ── Command Handlers ──────────────────────────────────────────────────
     async def test_start(update: Update, context):
-    await update.message.reply_text("Bot is working ✅")
+        await update.message.reply_text("Bot is working ✅")
     
     app.add_handler(CommandHandler("start", test_start))
     app.add_handler(CommandHandler("help", cmd_help))
