@@ -78,10 +78,7 @@ def create_application() -> Application:
     app = Application.builder().token(token).build()
 
     # ── Command Handlers ──────────────────────────────────────────────────
-    async def test_start(update: Update, context):
-    await update.message.reply_text("Bot is working ✅")
-
-app.add_handler(CommandHandler("start", test_start))
+    app.add_handler(CommandHandler("start", cmd_start))
     app.add_handler(CommandHandler("help", cmd_help))
     app.add_handler(CommandHandler("newbid", cmd_newbid))
     app.add_handler(CommandHandler("upload", cmd_upload))
